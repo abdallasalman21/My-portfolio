@@ -22,19 +22,43 @@ export class AboutComponent implements AfterViewInit {
 
     if (isPlatformBrowser(this.platformId)) {
 
-      new Swiper('.swiper', {
-        direction: 'horizontal',
-        loop: true,
-          slidesPerView: 4,
-  spaceBetween: 70,
+setTimeout(()=>{
+  new Swiper('.swiper', {
+  direction: 'horizontal',
+  loop: true,
+observer: true,
+observeParents: true,
+  spaceBetween: 20,
 
-    autoplay: {
+  autoplay: {
     delay: 2000,
     disableOnInteraction: false,
   },
 
-        
-      });
+  breakpoints: {
+    0: {
+      slidesPerView: 2,
+      spaceBetween: 0
+    },
+    576: {
+      slidesPerView: 3,
+      spaceBetween: 15
+    },
+    768: {
+      slidesPerView: 4,
+      spaceBetween: 20
+    },
+    992: {
+      slidesPerView: 4,
+      spaceBetween: 30
+    },
+    1200: {
+      slidesPerView: 4,
+      spaceBetween: 40
+    }
+  }
+});
+},0);
 
     }
   }
