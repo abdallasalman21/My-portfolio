@@ -1,1 +1,90 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import "flowbite/src/themes/default";
+
+@plugin "flowbite/plugin";
+
+@source "../node_modules/flowbite";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root{
+    --main-color:#D5FF3F;
+}
+.title{
+    font-family: Humane;
+font-weight: 700;
+font-style: Bold;
+font-size: 339.21px;
+line-height: 89%;
+
+
+}
+.main-bg{
+    background-color: #D5FF3F;
+}
+.main-text-color{
+    color: #D5FF3F;
+}
+.hover-main-text-color:hover {
+    color: #D5FF3F;
+
+}
+
+/* fonts */
+
+@font-face {
+  font-family: 'Humane';
+  src: url('/public/fonts/humane/Humane-Regular.ttf') format('opentype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Humane';
+  src: url('/public/fonts/Humane/Humane-Bold.otf') format('opentype');
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'Nunito';
+  src: url('/public/fonts/nunito/nunito-Regular.otf') format('opentype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('/public/fonts/nunito/nunito-Bold.otf') format('opentype');
+  font-weight: 700;
+}
+.humane-reg{
+  font-family: 'Humane';
+  font-weight: 400;
+
+}
+.humane-bold{
+    font-family: 'Humane';
+  font-weight: 700;
+}
+
+.nunito-reg{
+    font-family: 'Nunito';
+  font-weight: 400;
+}
+.nunito-bold{
+    font-family: 'Nunito';
+  font-weight: 700;
+}
+:host{
+    background: #000;
+}
+body{
+    background-color: #000;
+}
+/* h2{
+  font-size: 32px;
+}
+h1{
+  font-size: 250px;
+} */

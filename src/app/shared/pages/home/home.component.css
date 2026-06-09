@@ -1,0 +1,57 @@
+.back-box {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+ 
+}
+
+/* common style */
+.back-text {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+ 
+}
+.back-text h5{
+opacity: 0.3;
+  letter-spacing: 2px;
+  text-shadow:
+    1px 0 #D5FF3F,
+   -1px 0 #D5FF3F,
+    0 1px #D5FF3F,
+    0 -1px #D5FF3F;
+color:#1C1C1C;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+/* LEFT animation */
+.back-text.left {
+  animation: scrollleft 30s linear infinite;
+}
+
+/* RIGHT animation (عكس الاتجاه) */
+.back-text.right {
+  animation: scrollright 30s linear infinite;
+}
+
+/* الحركة */
+@keyframes scrollleft {
+  0% { transform: translatex(100%); }
+  100% { transform: translatex(-100%); }
+}
+
+@keyframes scrollright {
+  0% { transform: translatex(-100%); }
+  100% { transform: translatex(100%); }
+}
