@@ -48,19 +48,26 @@ data-aos="fade-left"
     data-aos-delay="600"
  class="form-box py-7 px-5">
 
-    <form action="" class="px-7 py-7">
+    <form 
+    [formGroup]="formData"
+    (ngSubmit)="sendEmail()"
+    action="" class="px-7 py-7">
     <label for="" class="flex flex-col py-2 md:py-4 lg:py-6 px-6">
         <span class="nunito-bold text-xl md:text-2xl lg:text-3xl px-2 py-4">
             Name 
         </span>
-        <input type="text" class="rounded-2xl border border-transparent px-10 py-4">
+        <input 
+         formControlName="name"
+        type="text" class="rounded-2xl border border-transparent px-10 py-4">
     </label>
 
      <label for="" class="flex flex-col py-2 md:py-4 lg:py-6 px-6">
         <span class="nunito-bold text-xl md:text-2xl lg:text-3xl px-2 py-4">
             Email 
         </span>
-        <input type="email" class="rounded-2xl border border-transparent px-10 py-4">
+        <input
+          formControlName="email"
+         type="email" class="rounded-2xl border border-transparent px-10 py-4">
     </label>
 
 
@@ -68,17 +75,21 @@ data-aos="fade-left"
         <span class="nunito-bold text-xl md:text-2xl lg:text-3xl px-2 py-4">
             Message 
         </span>
-        <input type="text" class="rounded-2xl border border-transparent px-7 py-4 h-48">
+        <input 
+            formControlName="message"
+        type="text" class="rounded-2xl border border-transparent px-7 py-4 h-48">
     </label>
 
 <div class="btn-holder px-8">
     
-    <button class="py-3 px-10 mx-auto bg-gray-950 border border-yellow-300 
+    <button 
+    type="submit"
+    class="py-3 cursor-pointer px-10 mx-auto bg-gray-950 border border-yellow-300 
     main-text-color rounded-xl 
     flex justify-center items-center justify-items-center min-w-full">
-        <a href="mailto:abdallasalman21@gmail.com">
+        
             Send
-        </a>
+      
     </button>
 </div>
 </form>

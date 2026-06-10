@@ -28,7 +28,6 @@ setTimeout(()=>{
   loop: true,
 observer: true,
 observeParents: true,
-  spaceBetween: 20,
 
   autoplay: {
     delay: 2000,
@@ -37,7 +36,11 @@ observeParents: true,
 
   breakpoints: {
     0: {
-      slidesPerView: 2,
+      slidesPerView: 2.9,
+      spaceBetween: 0
+    },
+      480: {
+      slidesPerView: 2.3,
       spaceBetween: 0
     },
     576: {
