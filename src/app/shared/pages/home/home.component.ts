@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Component,AfterViewInit, inject, PLATFORM_ID } from '@angular/core';
 import { RouterLink, RouterLinkActive } from "@angular/router";
+import gsap from 'gsap';
 
 
 @Component({
@@ -8,6 +10,15 @@ import { RouterLink, RouterLinkActive } from "@angular/router";
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent {
+export class HomeComponent implements AfterViewInit  {
+    private platformId = inject(PLATFORM_ID);
+  
+  ngAfterViewInit(): void {
+   if (!isPlatformBrowser(this.platformId)) return;
+
+ 
+
+    }
+    
 
 }

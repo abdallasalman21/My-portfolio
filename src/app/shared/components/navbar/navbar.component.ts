@@ -25,4 +25,17 @@ toggleMenu() {
 closeMenu() {
   this.isOpen = false;
 }
+
+open = false;
+
+toggleDropdown() {
+  this.open = !this.open;
+}
+
+changeColor(color: string) {
+  document.documentElement.style.setProperty('--main-color', color);
+  this.open = false; 
+}
+
+
 }

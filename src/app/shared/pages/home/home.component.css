@@ -1,3 +1,12 @@
+
+:root{
+    --main-color:#D5FF3F;
+}
+
+/* before home content */
+
+
+/* start home content  */
 .back-box {
   position: absolute;
   inset: 0;
@@ -22,10 +31,10 @@
 opacity: 0.3;
   letter-spacing: 2px;
   text-shadow:
-    1px 0 #D5FF3F,
-   -1px 0 #D5FF3F,
-    0 1px #D5FF3F,
-    0 -1px #D5FF3F;
+    1px 0 var(--main-color),
+   -1px 0 var(--main-color),
+    0 1px var(--main-color),
+    0 -1px var(--main-color);
 color:#1C1C1C;
   padding: 10px 20px;
   border-radius: 999px;
